@@ -33,7 +33,7 @@ public class PaintBoard extends VBox{
 	private Label sliderLabel;
 	private Label speedLabel;
 	private Button openFile;
-	private ComboBox<String> moreOptionBox;
+	public ComboBox<String> moreOptionBox;
 	private CheckBox overflowBox;
 	private boolean overflowSelected;
 	
@@ -49,7 +49,6 @@ public class PaintBoard extends VBox{
 				draw(importFileBool);
 				lastUpdate = now;
 			}
-			
 		}
 	};
 	/** Constructor for PaintBoard */
@@ -145,7 +144,7 @@ public class PaintBoard extends VBox{
 				System.exit(0);
 			}
 		});
-		
+		this.setAlignment(Pos.TOP_CENTER);
 		border.setBottom(bottomHbox);
 		bottomHbox.setSpacing(50);
 		bottomHbox.setAlignment(Pos.TOP_CENTER);
